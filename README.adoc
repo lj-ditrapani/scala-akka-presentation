@@ -1,12 +1,54 @@
-= Algebraic Data Types
+= Scala & Akka Presentation
+:data-uri:
+:stylesheet: style.css
+
+<<<
+
+== Algebraic Data Types
 
 Common in functional programming languages
 
 * product types 
-** Possible values of a product type is the Cartesian product of the values of it's component types
 * sum types
-** Possible values of a sum type is the sum of the possible values of all its sub types.
+
+<<<
+
+== Product types
+
+* Possible values of a product type is the Cartesian product of the values of it's component types
+
+[source,scala]
+----
+case class Person(name: String, age: Int)
+----
+
+<<<
+
+== Sum types
+
+* Possible values of a sum type is the sum of the possible values of all its sub types.
+
+[source,scala]
+----
+sealed trait Either[A, B]
+case class Left[A, B](value: A) extends Either[A, B]
+case class Right[A, B](value: B) extends Either[A, B]
+----
+
+<<<
 
 Picture of sum & product
 
+image::test.jpg[]
+
+
 Application that takes markdown & img tags -> pdf w/images
+
+https://github.com/lj-ditrapani/scala-overview
+
+https://en.wikipedia.org/wiki/Algebraic_data_type
+http://merrigrove.blogspot.com/2011/12/another-introduction-to-algebraic-data.html
+
+http://danielwestheide.com/blog/2013/02/06/the-neophytes-guide-to-scala-part-12-type-classes.html
+http://tpolecat.github.io/presentations/algebraic_types.html#1
+https://gleichmann.wordpress.com/2011/01/30/functional-scala-algebraic-datatypes-enumerated-types/
