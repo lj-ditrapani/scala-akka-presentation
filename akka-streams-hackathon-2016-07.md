@@ -100,7 +100,7 @@ Other Akka APIs
 - Circuit breaker
 
 
-Benefits of using Akka Streams in Inveroty App
+Benefits of using Akka Streams in Inventory App
 ----------------------------------------------
 
 - Performance

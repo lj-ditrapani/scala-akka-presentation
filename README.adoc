@@ -1,4 +1,6 @@
 = Scala & Akka Presentation
+Lyall Jonathan Di Trapani <jonathan.ditrapani@manheim.com>
+v1.0, 2016-08-24
 :data-uri:
 :stylesheet: style.css
 :source-highlighter: pygments
@@ -22,14 +24,31 @@ https://github.com/lj-ditrapani/scala-overview
 
 Common in functional programming languages
 
-* product types 
-* sum types
+* product types (AND &)
+* sum types (OR |)
 
 <<<
 
 == Product types
 
-* Possible values of a product type is the Cartesian product of the values of it's component types
+* Possible values of a product type is the Cartesian product of the values of
+  its component types
+* Color: {Red, Blue}  AND  Size: {Small, Medium, Large}
+
+<<<
+
+== Product types
+
+[cols="4*^.^"]
+|===
+
+|       | Small | Medium | Large
+
+| Red   | image:red-small.png[] | image:red-med.png[] | image:red-large.png[]
+
+| Blue   | image:blue-small.png[] | image:blue-med.png[] | image:blue-large.png[]
+|===
+
 
 [source,scala]
 ----
@@ -42,16 +61,23 @@ case class Person(name: String, age: Int)
 
 * Possible values of a sum type is the sum of the possible values of all its sub types.
 
+[cols="5*^.^"]
+|===
+2+| Color
+3+| Size
+
+| image:red.png[]   | image:blue.png[]
+| image:small.png[] | image:med.png[] | image:large.png[]
+
+|===
+
+
 [source,scala]
 ----
 sealed trait Either[A, B]
 case class Left[A, B](value: A) extends Either[A, B]
 case class Right[A, B](value: B) extends Either[A, B]
 ----
-
-<<<
-
-Picture of sum & product
 
 <<<
 
