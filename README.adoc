@@ -68,11 +68,10 @@ case class Person(name: String, age: Int)
 
 | image:red.png[]   | image:blue.png[]
 | image:small.png[] | image:med.png[] | image:large.png[]
-
 |===
 
 
-[source,scala]
+[source,scala,linenums]
 ----
 sealed trait Either[A, B]
 case class Left[A, B](value: A) extends Either[A, B]
@@ -81,9 +80,65 @@ case class Right[A, B](value: B) extends Either[A, B]
 
 <<<
 
-== Scala Overview
+== Expression Problem
 
-List data structure
+Example from: http://c2.com/cgi/wiki?ExpressionProblem
+
+Functional Programming; adding a new data type is painful.
+
+[source,haskell,linunums]
+----
+type Shape = Square of side
+           | Circle of radius
+
+define area = fun x -> case x of
+    Square of side => (side * side)
+  | Circle of radius => (3.14 *  radius * radius)
+----
+
+<<<
+
+== Expression Problem
+
+Object Oriented Programming; adding an new method is painful.
+
+[source,cpp,linenums]
+----
+class Shape <: Object
+  virtual fun area : () -> double
+
+class Square <: Shape
+  side : double
+  area() =  side * side
+
+class Circle <: Shape
+  radius : double
+  area() = 3.14 * radius * radius
+----
+
+// Scala implementation of case classes & pattern matching
+// allow both approaches, although not without re-compilation.
+// Type classes (which scala has) actually do solve this problem completely.
+
+<<<
+
+== List data structure
+
+List is a Cons or a Nil
+
+* Cons(value, List)
+* Nil terminates a list
+
+[cols="2*.^"]
+|===
+| image:list1.png[list1,100,50]  | `Cons(5, Nil)`
+
+| image:list2.png[list2,220,50]  | `Cons(5, Cons(22, Nil))`
+|===
+
+<<<
+
+== Scala Overview
 
 https://github.com/lj-ditrapani/scala-overview
 
@@ -103,9 +158,9 @@ https://github.com/lj-ditrapani/scala-overview
 == Resources
 
 * https://en.wikipedia.org/wiki/Algebraic_data_type
+* http://c2.com/cgi/wiki?ExpressionProblem
 * http://merrigrove.blogspot.com/2011/12/another-introduction-to-algebraic-data.html
 * http://tpolecat.github.io/presentations/algebraic_types.html#1
-* https://gleichmann.wordpress.com/2011/01/30/functional-scala-algebraic-datatypes-enumerated-types/
 * http://danielwestheide.com/blog/2012/11/21/the-neophytes-guide-to-scala-part-1-extractors.html
 
 <<<

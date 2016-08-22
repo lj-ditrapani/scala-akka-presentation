@@ -1,0 +1,11 @@
+== Images
+
+* Sum & product types graphics
+* 3 Akka actors with mailboxes & messages (arrows)
+* Steams graph with load balancer & multi-streams
+
+
+Put scala overview intro into slides
+
+Talk about Erlang -> akka provides an actor system similar to Erlang but on the JVM
+Works with Java
