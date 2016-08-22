@@ -63,6 +63,8 @@ https://github.com/lj-ditrapani/scala-overview
 
 <<<
 
+== Akka
+
 * Akka actors
 * Akka streams
 * Akka http
