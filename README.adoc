@@ -1,6 +1,20 @@
 = Scala & Akka Presentation
 :data-uri:
 :stylesheet: style.css
+:source-highlighter: pygments
+
+////
+Draw actor diagram (3 actors, mailboxes)
+Draw box & pointer diagram for list
+Draw a stream graph with load balancer & multi parallel streams
+Draw our planned stream design?
+////
+
+<<<
+
+== Scala Overview Intro
+
+https://github.com/lj-ditrapani/scala-overview
 
 <<<
 
@@ -39,16 +53,35 @@ case class Right[A, B](value: B) extends Either[A, B]
 
 Picture of sum & product
 
-image::test.jpg[]
+<<<
 
+== Scala Overview
 
-Application that takes markdown & img tags -> pdf w/images
+List data structure
 
 https://github.com/lj-ditrapani/scala-overview
 
-https://en.wikipedia.org/wiki/Algebraic_data_type
-http://merrigrove.blogspot.com/2011/12/another-introduction-to-algebraic-data.html
+<<<
 
-http://danielwestheide.com/blog/2013/02/06/the-neophytes-guide-to-scala-part-12-type-classes.html
-http://tpolecat.github.io/presentations/algebraic_types.html#1
-https://gleichmann.wordpress.com/2011/01/30/functional-scala-algebraic-datatypes-enumerated-types/
+* Akka actors
+* Akka streams
+* Akka http
+* See akka-streams doc for talking notes
+* Show
+** http://doc.akka.io/docs/akka/2.4.9/scala/stream/stream-composition.html
+
+<<<
+
+== Resources
+
+* https://en.wikipedia.org/wiki/Algebraic_data_type
+* http://merrigrove.blogspot.com/2011/12/another-introduction-to-algebraic-data.html
+* http://tpolecat.github.io/presentations/algebraic_types.html#1
+* https://gleichmann.wordpress.com/2011/01/30/functional-scala-algebraic-datatypes-enumerated-types/
+* http://danielwestheide.com/blog/2012/11/21/the-neophytes-guide-to-scala-part-1-extractors.html
+
+<<<
+
+== Questions?
+
+image::test.jpg[]
