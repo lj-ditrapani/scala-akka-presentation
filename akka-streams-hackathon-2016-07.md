@@ -43,7 +43,7 @@ Using Actors
 ------------
 
 - Erlang's model on JVM
-- Erlang's model on with types
+- Erlang's model within a typed language
 - Extend Actor, implement receive method
 - Receive method branch on message type/content
 - Send messages to other actors (tell !)
