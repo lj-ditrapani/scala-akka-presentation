@@ -1,6 +1,6 @@
 == Images
 
-* Sum & product types graphics
+* List ADT: UML class diagram showing inheritance
 * 3 Akka actors with mailboxes & messages (arrows)
 * Steams graph with load balancer & multi-streams
 

@@ -5,13 +5,6 @@ v1.0, 2016-08-24
 :stylesheet: style.css
 :source-highlighter: pygments
 
-////
-Draw actor diagram (3 actors, mailboxes)
-Draw box & pointer diagram for list
-Draw a stream graph with load balancer & multi parallel streams
-Draw our planned stream design?
-////
-
 <<<
 
 == Scala Overview Intro
@@ -31,8 +24,8 @@ Common in functional programming languages
 
 == Product types
 
-* Possible values of a product type is the Cartesian product of the values of
-  its component types
+* The set of possible values of a product type is the Cartesian product of
+  the values of its component types
 * Color: {Red, Blue}  AND  Size: {Small, Medium, Large}
 
 <<<
@@ -59,7 +52,8 @@ case class Person(name: String, age: Int)
 
 == Sum types
 
-* Possible values of a sum type is the sum of the possible values of all its sub types.
+* The set of possible values of a sum type is the sum of the possible values
+  of all its sub types.
 
 [cols="5*^.^"]
 |===
@@ -144,10 +138,12 @@ case class Empty() extends Lst
 [source,scala,linenums]
 ----
 sealed trait class Lst {
-  @tailrec def reduce(zero: Int)(f: (Int, Int) => Int): Int = this match {
-    case x: Empty => zero
-    case x: Cell => x.tail.reduce(f(zero, x.head))(f)
-  }
+  @tailrec
+  def reduce(zero: Int)(f: (Int, Int) => Int): Int =
+    this match {
+      case x: Empty => zero
+      case x: Cell => x.tail.reduce(f(zero, x.head))(f)
+    }
 }
 ----
 
@@ -158,10 +154,12 @@ sealed trait class Lst {
 [source,scala,linenums]
 ----
 sealed trait class Lst {
-  @tailrec def reduce(zero: Int)(f: (Int, Int) => Int): Int = this match {
-    case Empty() => zero
-    case Cell(h, t) => t.reduce(f(zero, h))(f)
-  }
+  @tailrec
+  def reduce(zero: Int)(f: (Int, Int) => Int): Int =
+    this match {
+      case Empty() => zero
+      case Cell(h, t) => t.reduce(f(zero, h))(f)
+    }
 }
 ----
 
@@ -173,10 +171,11 @@ sealed trait class Lst {
 ----
 sealed trait class Lst {
   @tailrec
-  def reduce[B](zero: B)(f: (B, Int) => B): B = this match {
-    case Empty() => zero
-    case Cell(h, t) => t.reduce(f(zero, h))(f)
-  }
+  def reduce[B](zero: B)(f: (B, Int) => B): B =
+    this match {
+      case Empty() => zero
+      case Cell(h, t) => t.reduce(f(zero, h))(f)
+    }
 }
 ----
 
@@ -188,10 +187,11 @@ sealed trait class Lst {
 ----
 sealed trait class Lst[A] {
   @tailrec
-  def reduce[B](zero: B)(f: (B, A) => B): B = this match {
-    case Empty() => zero
-    case Cell(h, t) => t.reduce(f(zero, h))(f)
-  }
+  def reduce[B](zero: B)(f: (B, A) => B): B =
+    this match {
+      case Empty() => zero
+      case Cell(h, t) => t.reduce(f(zero, h))(f)
+    }
 }
 
 case class Cell[A](head: A, tail: Lst[A]) extends Lst[A]
@@ -207,10 +207,11 @@ case class Empty[A]() extends Lst[A]
 ----
 sealed trait class Lst[+A] {
   @tailrec
-  def reduce[B](zero: B)(f: (B, A) => B): B = this match {
-    case Empty => zero
-    case Cell(h, t) => t.reduce(f(zero, h))(f)
-  }
+  def reduce[B](zero: B)(f: (B, A) => B): B =
+    this match {
+      case Empty => zero
+      case Cell(h, t) => t.reduce(f(zero, h))(f)
+    }
 }
 
 case class Cell[A](head: A, tail: Lst[A]) extends Lst[A]

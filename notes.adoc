@@ -1,0 +1,40 @@
+
+Scala overview intro
+* pics
+** judge scale static/dynamic types
+** lambda calculus fp pics
+* notes here
+
+Draw actor diagram (3 actors, mailboxes)
+Draw a stream graph with load balancer & multi parallel streams
+Draw our planned stream design?
+
+
+Cost of typed language
+----------------------
+- Extra wordiness of types
+- Optimized for maintainability/readability over write-ability
+- 'noise' of types
+- Almost like 2 languages; the runtime semantics & the type system
+
+
+Benefit
+-------
+- maintainability
+- readability (types are documentation)
+- performance (not true with TypeScript)
+- Don't need tests to check that you implemented the interface correctly
+- Don't need tests to check that you are using the interface correctly
+- Debugging tools
+
+
+FP
+--
+- Referential transparency
+- Immutable data structures
+- Pure, side-effect-free functions
+
+
+== List Data Structure
+
+* ADT product & sum
