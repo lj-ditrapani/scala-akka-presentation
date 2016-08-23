@@ -7,15 +7,24 @@ v1.0, 2016-08-24
 
 <<<
 
-== Scala Overview Intro
+== Static vs Dynamic Type System
 
-https://github.com/lj-ditrapani/scala-overview
+image::scale.png[scale,500,500,align="center"]
+
+<<<
+
+== Functional Programming
+
+[cols="3*^.^a"]
+|===
+|image:lambda.jpg[]
+|image:function.jpg[]
+|image:haskell.png[haskell,300,300]
+|===
 
 <<<
 
 == Algebraic Data Types
-
-Common in functional programming languages
 
 * product types (AND &)
 * sum types (OR |)
@@ -128,8 +137,7 @@ case class Empty() extends Lst
 ** unapply
 ** toString
 ** copy
-** ==
-** hash
+** == & hash
 
 <<<
 
@@ -257,13 +265,11 @@ class Circle <: Shape
   area() = 3.14 * radius * radius
 ----
 
-// Scala implementation of case classes & pattern matching
-// allow both approaches, although not without re-compilation.
-// Type classes (which scala has) actually do solve this problem completely.
-
 <<<
 
 == Scala Overview
+
+For more detail:
 
 https://github.com/lj-ditrapani/scala-overview
 
@@ -284,9 +290,6 @@ https://github.com/lj-ditrapani/scala-overview
 
 * https://en.wikipedia.org/wiki/Algebraic_data_type
 * http://c2.com/cgi/wiki?ExpressionProblem
-* http://merrigrove.blogspot.com/2011/12/another-introduction-to-algebraic-data.html
-* http://tpolecat.github.io/presentations/algebraic_types.html#1
-* http://danielwestheide.com/blog/2012/11/21/the-neophytes-guide-to-scala-part-1-extractors.html
 
 <<<
 
