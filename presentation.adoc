@@ -15,6 +15,14 @@ v1.0, 2016-08-24
 
 <<<
 
+== Scala Language
+
+* Object Oriented & Functional
+* Static type system
+* On the JVM
+
+<<<
+
 == Static vs Dynamic Type System
 
 image::scale.png[scale,500,500,align="center"]

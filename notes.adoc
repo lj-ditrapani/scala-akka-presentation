@@ -15,7 +15,7 @@
 * performance (not true with TypeScript)
 * Don't need tests to check that you implemented the interface correctly
 * Don't need tests to check that you are using the interface correctly
-* Debugging tools
+* Tooling
 * Expressing developer intent
 * Machine checked every TDD cycle: always in-sync
 
@@ -26,6 +26,7 @@
 * Immutable data structures
 * Pure, side-effect-free functions
 * Easier to reason about code
+* Easier to test
 
 == Algebraic Data Types
 

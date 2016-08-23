@@ -28,6 +28,7 @@ Threading
 Actors
 ------
 
+- 2009, replaced scala std lib actors
 - high-level abstractions for
     - distribution
     - concurrency and parallelism
@@ -67,7 +68,7 @@ Actor issues
 Streams
 -------
 
-- Reactive function programming
+- Reactive functional programming
 - Meta language for building actor networks
 - Typed input & output
 - Focus on what you want to do with each data element
