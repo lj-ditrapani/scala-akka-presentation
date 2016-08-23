@@ -7,6 +7,14 @@ v1.0, 2016-08-24
 
 <<<
 
+== Overview
+
+* Why scala
+* Scala language features
+* Akka framework
+
+<<<
+
 == Static vs Dynamic Type System
 
 image::scale.png[scale,500,500,align="center"]
@@ -282,31 +290,33 @@ https://github.com/lj-ditrapani/scala-overview
 * Akka streams
 * Akka http
 
+<<<
+
 == Threads
 
 image::threads.jpg[align="center"]
 
 <<<
 
-=== Actors
+== Actors
 
 image::actors.png[align="center"]
 
 <<<
 
-=== Streams
+== Streams
 
 image::streams1.png[streams1,400,400,align="center"]
 
 <<<
 
-=== Streams
+== Streams
 
 image::streams2.png[streams2,500,500,align="center"]
 
 <<<
 
-=== Streams
+== Streams
 
 image::streams3.png[align="center"]
 image::streams4.png[align="center"]
@@ -317,6 +327,8 @@ image::streams4.png[align="center"]
 
 * https://en.wikipedia.org/wiki/Algebraic_data_type
 * http://c2.com/cgi/wiki?ExpressionProblem
+* http://doc.akka.io/docs/akka/2.4.9/scala/stream/stream-composition.html
+* http://akka.io/docs
 
 <<<
 
