@@ -8,6 +8,7 @@ Concurrency
 - Threading
 - Akka Actors
 - Akka Streams
+- Akka Http
 
 
 Threading
@@ -40,20 +41,21 @@ Actors
 Using Actors
 ------------
 
+- Erlang's model on JVM
+- Erlang's model on with types
 - Extend Actor, implement receive method
 - Receive method branch on message type/content
 - Send messages to other actors (tell !)
 - Mailbox
-- Become/unbecome
 - Isolate state
 - Guarantee sequential execution of messages
+- Java API & Scala API
 
 
 Actor issues
 ------------
 
 - Boiler plate to achieve stable streaming network of actors
-- Implement 2 messages for each method
 - OO, not functional
 - Not completely type safe
 - Network is not verified
@@ -89,6 +91,10 @@ http://doc.akka.io/docs/akka/2.4/scala/stream/stream-composition.html
   - fan in (merge)
   - fan out (balance, broadcast)
   - feeback
+
+
+Akka Http
+---------
 
 
 Other Akka APIs

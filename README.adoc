@@ -1,5 +1,5 @@
 = Scala & Akka Presentation
-Lyall Jonathan Di Trapani <jonathan.ditrapani@manheim.com>
+Lyall Jonathan Di_Trapani <jonathan.ditrapani@manheim.com>
 v1.0, 2016-08-24
 :data-uri:
 :stylesheet: style.css
@@ -277,12 +277,39 @@ https://github.com/lj-ditrapani/scala-overview
 
 == Akka
 
+* Threads
 * Akka actors
 * Akka streams
 * Akka http
-* See akka-streams doc for talking notes
-* Show
-** http://doc.akka.io/docs/akka/2.4.9/scala/stream/stream-composition.html
+
+== Threads
+
+image::threads.jpg[align="center"]
+
+<<<
+
+=== Actors
+
+image::actors.png[align="center"]
+
+<<<
+
+=== Streams
+
+image::streams1.png[streams1,400,400,align="center"]
+
+<<<
+
+=== Streams
+
+image::streams2.png[streams2,500,500,align="center"]
+
+<<<
+
+=== Streams
+
+image::streams3.png[align="center"]
+image::streams4.png[align="center"]
 
 <<<
 
@@ -295,4 +322,4 @@ https://github.com/lj-ditrapani/scala-overview
 
 == Questions?
 
-image::test.jpg[]
+image::test.jpg[align="center"]
