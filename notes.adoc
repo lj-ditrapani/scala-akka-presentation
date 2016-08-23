@@ -1,14 +1,4 @@
-
-Scala overview intro
-* pics
-** judge scale static/dynamic types
-** lambda calculus fp pics
-* notes here
-
-Draw actor diagram (3 actors, mailboxes)
-Draw a stream graph with load balancer & multi parallel streams
-Draw our planned stream design?
-
+= Notes
 
 == Cost of statically typed language
 
