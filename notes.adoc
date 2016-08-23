@@ -54,3 +54,7 @@ Draw our planned stream design?
 * Scala implementation of case classes & pattern matching
 * allow both approaches, although not without re-compilation.
 * Type classes (which scala has) actually do solve this problem completely.
+
+== Akka
+
+See akka-streams-hackathon-2016-07.md

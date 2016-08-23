@@ -340,4 +340,4 @@ image::streams4.png[align="center"]
 
 == Questions?
 
-image::test.jpg[align="center"]
+image::test.jpg[cat,400,400,align="center"]

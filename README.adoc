@@ -1,0 +1,11 @@
+Manheim Engineering Community of Practice Presentation for 2016-08-23.
+
+To create pdf:
+
+----
+bundle install --path vendor/bundle
+bundle exec asciidoctor presentation.adoc
+----
+
+Open presentation.html in a browser and print to pdf in landscape without
+headers & footers.
