@@ -7,7 +7,6 @@
 * 'noise' of types
 * Almost like 2 languages; the runtime semantics & the type system
 
-
 == Benefit
 
 * maintainability
@@ -18,7 +17,6 @@
 * Tooling
 * Expressing developer intent
 * Machine checked every TDD cycle: always in-sync
-
 
 == Functional Programming
 
