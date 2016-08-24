@@ -21,6 +21,7 @@
 == Functional Programming
 
 Supports
+
 * Pure, side-effect-free functions
 * Referential transparency
 ** expressions can be substituted by the result of their evaluation
