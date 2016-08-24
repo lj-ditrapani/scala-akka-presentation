@@ -29,6 +29,43 @@ image::scale.png[scale,500,500,align="center"]
 
 <<<
 
+== Static vs Dynamic Type System
+
+[source,ruby]
+----
+def f(name)
+  1
+end
+----
+
+[source,scala]
+----
+def f(name: String): Int = 1
+----
+
+<<<
+
+== Static vs Dynamic Type System
+
+[source,scala]
+----
+trait Foo {
+  def f(name: String): Int
+}
+
+class ImplFoo extends Foo {
+  def f(name: String): Int = 1
+}
+
+object Bar {
+  def g(foo: Foo): Int = {
+    foo.f("SellerTools") + 5
+  }
+}
+----
+
+<<<
+
 == Functional Programming
 
 [cols="3*^.^a"]
