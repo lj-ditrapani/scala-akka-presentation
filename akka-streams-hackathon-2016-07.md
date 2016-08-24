@@ -28,11 +28,16 @@ Threading
 Actors
 ------
 
-- 2009, replaced scala std lib actors
 - high-level abstractions for
-    - distribution
-    - concurrency and parallelism
-- Asynchronous, non-blocking, performant, message-driven model
+    - distributed
+    - concurrent and parallel
+- Erlang
+- Akka 2009, replaced scala std lib actors
+- Erlang on JVM
+- Erlang with a typed language
+- Message passing
+  - Asynchronous
+  - non-blocking
 - Lightweight processes
   - Several million actors per GB of heap memory
 - Easier to "get right" than threading, harder to create disasters
@@ -42,11 +47,10 @@ Actors
 Using Actors
 ------------
 
-- Erlang's model on JVM
-- Erlang's model within a typed language
-- Extend Actor, implement receive method
-- Receive method branch on message type/content
-- Send messages to other actors (tell !)
+- Extend Actor
+- Implement receive method
+- Branch on message type/content
+- Send messages to other actors
 - Mailbox
 - Isolate state
 - Guarantee sequential execution of messages
@@ -60,8 +64,8 @@ Actor issues
 - OO, not functional
 - Not completely type safe
 - Network is not verified
-- How to bound mail boxes to
-  - prevent out-of-memory
+- Unbounded mail boxes
+  - prevent out-of-memory?
   - but also not drop events?
 
 
@@ -70,6 +74,10 @@ Streams
 
 - Reactive functional programming
 - Meta language for building actor networks
+- Components
+  - Source: 1 output
+  - Flow: 1 input, 1 output
+  - Sink: 1 input
 - Typed input & output
 - Focus on what you want to do with each data element
 - Streams take care of the "conveyor belts" between nodes
@@ -82,11 +90,6 @@ Streams
 Stream basics
 -------------
 
-http://doc.akka.io/docs/akka/2.4/scala/stream/stream-composition.html
-
-- Source: 1 output
-- Flow: 1 input, 1 output
-- Sink: 1 input
 - Components are composable
 - Higher level Graph dsl
   - fan in (merge)
