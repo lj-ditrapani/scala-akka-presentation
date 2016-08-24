@@ -20,16 +20,20 @@
 
 == Functional Programming
 
-* Referential transparency
-* Immutable data structures
+Supports
 * Pure, side-effect-free functions
+* Referential transparency
+** expressions can be substituted by the result of their evaluation
+* Immutable data structures
+
+Produces
 * Easier to reason about code
 * Easier to test
 
 == Algebraic Data Types
 
 * Work especially well in FP + statically types languages
-  * compile time pattern matching type check (exhaustive)
+** compile time pattern matching type check (exhaustive)
 * Common in functional programming languages
 
 == List Data Structure
