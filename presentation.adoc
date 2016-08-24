@@ -53,17 +53,14 @@ image::scale.png[scale,500,500,align="center"]
 * product types (AND &)
 * sum types (OR |)
 
-<<<
-
-== Product types
-
-* The set of possible values of a product type is the Cartesian product of
-  the values of its component types
-* Color: {Red, Blue}  AND  Size: {Small, Medium, Large}
+* Color: {Red, Blue}
+* Size: {Small, Medium, Large}
 
 <<<
 
 == Product types
+
+Circle: Color AND Size
 
 [cols="4*^.^"]
 |===
@@ -85,8 +82,7 @@ case class Person(name: String, age: Int)
 
 == Sum types
 
-* The set of possible values of a sum type is the sum of the possible values
-  of all its sub types.
+* Property: Color OR Size
 
 [cols="5*^.^"]
 |===
@@ -104,22 +100,6 @@ sealed trait Either[A, B]
 case class Left[A, B](value: A) extends Either[A, B]
 case class Right[A, B](value: B) extends Either[A, B]
 ----
-
-<<<
-
-== List Data Structure
-
-List is a Cons or a Nil
-
-* Cons(value, List)
-* Nil terminates a list
-
-[cols="2*.^"]
-|===
-| image:list1.png[list1,100,50]  | `Cons(5, Nil)`
-
-| image:list2.png[list2,220,50]  | `Cons(5, Cons(22, Nil))`
-|===
 
 <<<
 
@@ -169,10 +149,10 @@ case class Empty() extends Lst
 ----
 sealed trait Lst {
   @tailrec
-  def reduce(zero: Int)(f: (Int, Int) => Int): Int =
+  def reduce(seed: Int)(f: (Int, Int) => Int): Int =
     this match {
-      case x: Empty => zero
-      case x: Cell => x.tail.reduce(f(zero, x.head))(f)
+      case x: Empty => seed
+      case x: Cell => x.tail.reduce(f(seed, x.head))(f)
     }
 }
 ----
@@ -185,68 +165,12 @@ sealed trait Lst {
 ----
 sealed trait Lst {
   @tailrec
-  def reduce(zero: Int)(f: (Int, Int) => Int): Int =
+  def reduce(seed: Int)(f: (Int, Int) => Int): Int =
     this match {
-      case Empty() => zero
-      case Cell(h, t) => t.reduce(f(zero, h))(f)
+      case Empty() => seed
+      case Cell(h, t) => t.reduce(f(seed, h))(f)
     }
 }
-----
-
-<<<
-
-== Type Parameterized Method
-
-[source,scala,linenums]
-----
-sealed trait Lst {
-  @tailrec
-  def reduce[B](zero: B)(f: (B, Int) => B): B =
-    this match {
-      case Empty() => zero
-      case Cell(h, t) => t.reduce(f(zero, h))(f)
-    }
-}
-----
-
-<<<
-
-== Type Parameterized Class
-
-[source,scala,linenums]
-----
-sealed trait Lst[A] {
-  @tailrec
-  def reduce[B](zero: B)(f: (B, A) => B): B =
-    this match {
-      case Empty() => zero
-      case Cell(h, t) => t.reduce(f(zero, h))(f)
-    }
-}
-
-case class Cell[A](head: A, tail: Lst[A]) extends Lst[A]
-
-case class Empty[A]() extends Lst[A]
-----
-
-<<<
-
-== Empty object
-
-[source,scala,linenums]
-----
-sealed trait Lst[+A] {
-  @tailrec
-  def reduce[B](zero: B)(f: (B, A) => B): B =
-    this match {
-      case Empty => zero
-      case Cell(h, t) => t.reduce(f(zero, h))(f)
-    }
-}
-
-case class Cell[A](head: A, tail: Lst[A]) extends Lst[A]
-
-object Empty extends Lst[Nothing]
 ----
 
 <<<
@@ -289,14 +213,6 @@ class Circle <: Shape
 
 <<<
 
-== Scala Overview
-
-For more detail:
-
-https://github.com/lj-ditrapani/scala-overview
-
-<<<
-
 == Akka
 
 * Threads
@@ -314,26 +230,26 @@ image::threads.jpg[align="center"]
 
 == Actors
 
-image::actors.png[align="center"]
+image::actors.png[actors,850,850,align="center"]
 
 <<<
 
 == Streams
 
-image::streams1.png[streams1,400,400,align="center"]
+image::streams1.png[streams1,550,550,align="center"]
 
 <<<
 
 == Streams
 
-image::streams2.png[streams2,500,500,align="center"]
+image::streams2.png[streams2,600,600,align="center"]
 
 <<<
 
 == Streams
 
-image::streams3.png[align="center"]
-image::streams4.png[align="center"]
+image::streams3.png[streams3,550,550,align="center"]
+image::streams4.png[streams4,550,550,align="center"]
 
 <<<
 
