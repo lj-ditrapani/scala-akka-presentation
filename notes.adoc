@@ -28,6 +28,7 @@ Supports
 * Immutable data structures
 
 Produces
+
 * Easier to reason about code
 * Easier to test
 
