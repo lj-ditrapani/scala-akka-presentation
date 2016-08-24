@@ -77,7 +77,6 @@ object Bar {
 
 * Case classes
 * Pattern matching
-* Type parameters
 
 <<<
 
