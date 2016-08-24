@@ -25,11 +25,7 @@ v1.0, 2016-08-24
 
 == Static vs Dynamic Type System
 
-image::scale.png[scale,500,500,align="center"]
-
-<<<
-
-== Static vs Dynamic Type System
+image::scale.png[scale,250,250,align="center"]
 
 [source,ruby]
 ----
